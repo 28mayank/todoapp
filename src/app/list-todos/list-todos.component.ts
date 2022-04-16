@@ -13,10 +13,10 @@ export class ListTodosComponent implements OnInit {
 
   ngOnInit(): void {
     this.todo = [
-      { id: 1, description: 'Learning Angular' },
-      { id: 2, description: 'Learning Spring Boot' },
-      { id: 3, description: 'Explore India' }
+      new Todos(1, 'Learning Angular', new Date(), false),
+      new Todos(2, 'Learning Spring Boot', new Date(), false),
+      new Todos(3, 'Explore India', new Date(), false)
     ];
-}
+  }
 
 }

@@ -1,15 +1,18 @@
 <html>
   <table border="1" [cellPadding]="7"> 
+    <caption><b>Todos</b></caption>
     <thead>
       <tr>
-        <td>ID</td>
-        <td>Description</td>
+        <th>Description</th>
+        <th>Target Date</th>
+        <th>Status</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let option of todo">
-        <td>{{option.id}}</td>
         <td>{{option.description}}</td>
+        <td>{{option.targetDate | date}}</td>
+        <td>{{option.status}}</td>
       </tr>
     </tbody>
   </table>
