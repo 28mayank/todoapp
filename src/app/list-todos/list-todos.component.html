@@ -1,0 +1,16 @@
+<html>
+  <table border="1" [cellPadding]="7"> 
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Description</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let option of todo">
+        <td>{{option.id}}</td>
+        <td>{{option.description}}</td>
+      </tr>
+    </tbody>
+  </table>
+</html>
