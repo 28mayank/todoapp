@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Todos } from '../modals/todos';
+import { Todos } from '../../modals/todos';
 
 @Component({
   selector: 'app-list-todos',
