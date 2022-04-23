@@ -1,15 +1,19 @@
-<h1>Login</h1>
+<h1 class="style-text">Login</h1>
 
 <div class="container">
-  <div class="alert alert-warning" *ngIf="isInvalid">
+  <div class="alert alert-warning style-text" *ngIf="isInvalid">
     {{errorMessage}}
   </div>
 
-  <div>
-    <form id="loginForm">
-      User Name: <input type="text" name="userName" [(ngModel)]="userName" /><br>
-      Password: <input type="password" name="password" [(ngModel)]="password" /><br>
-      <button class="btn btn-success" (click)="onLogin()">Login</button>
-    </form>
-  </div>
+  <form class="d-grid gap-3 p-2 bg-light border">
+    <div class="form-group p-2">
+      <label>User Name</label>
+      <input class="form-control" type="text" name="userName" [(ngModel)]="userName" />
+    </div>
+    <div class="form-group p-2">
+      <label>Password</label>
+      <input class="form-control" type="password" name="password" [(ngModel)]="password" />
+    </div>
+    <button class="btn btn-primary p-2" type="submit" (click)="onLogin()">Login</button>
+  </form>
 </div>

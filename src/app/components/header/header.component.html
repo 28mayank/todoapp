@@ -4,11 +4,12 @@
       <a class="navbar-brand" routerLink="/welcome/mack">My Todos</a>
     </div>
     <ul class="navbar-nav">
-      <li><a class="nav-link" routerLink="/welcome/mack">Home</a></li>
-      <li><a class="nav-link" routerLink="/todos">Todos</a></li>
+      <li><a class="nav-link" *ngIf="userLoggedIn.isUserLoggedIn()" routerLink="/welcome/mack">Home</a></li>
+      <li><a class="nav-link" *ngIf="userLoggedIn.isUserLoggedIn()" routerLink="/todos">Todos</a></li>
     </ul>
     <ul class="navbar-nav navbar-collapse justify-content-end">
-      <li><a class="nav-link" routerLink="/logout">Logout</a></li>
+      <li><a class="nav-link" *ngIf="!userLoggedIn.isUserLoggedIn()" routerLink="/login">Login</a></li>
+      <li><a class="nav-link" *ngIf="userLoggedIn.isUserLoggedIn()" routerLink="/logout">Logout</a></li>
     </ul>
   </nav>
 </header>
